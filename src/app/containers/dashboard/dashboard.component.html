@@ -1,0 +1,27 @@
+<div class="container-fluid">
+
+    <div class="w-100 searchBar">
+        <app-search-bar (term)="getSearchResults($event)"></app-search-bar>
+      </div>
+    
+            <ng-container *ngIf="results?.length>0">
+                <div class="main-panel">
+                    <div class="w-100">
+                    <div class="row no-gutters">
+                        <div *ngFor="let result of results" class="col-3 cursor-pointer">
+                            <app-movie-card [data]="result" [details]="movieDetails" (idEmitter)="getDetails($event)"></app-movie-card>
+                        </div>
+                    </div>
+                    </div>
+                </div>    
+            </ng-container>
+
+            <ng-container *ngIf="results && results.length===0"> 
+                No results found
+              </ng-container>
+            <ng-container *ngIf="!results"> 
+              Search to get results
+            </ng-container>
+        
+</div>
+

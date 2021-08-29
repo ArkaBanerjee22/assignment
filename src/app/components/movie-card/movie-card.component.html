@@ -1,0 +1,42 @@
+<div class="m-2 card text-capitalize" (mouseover)="emitId()">
+    <div class="image-container">
+        <img class="w-100" [src]="data.Poster" />
+    </div>
+
+    <div class="title text-center text-truncate">
+        {{data.Title}}
+    </div>
+
+    <div class="type text-center">
+        <b>Type:</b> {{data.Type}}
+    </div>
+</div>
+
+<div *ngIf="details && details.imdbID === data.imdbID" class="det-style">
+    <div class="card p-2">
+        <div class="title border-bottom font-bold">
+            {{details.Title}} ({{details.imdbRating}})
+        </div>
+
+        <div class="details-section">
+            {{details.Plot}}
+        </div>
+        <div class="details-section">
+           <b>Cast:</b>  {{details.Actors}}
+        </div>
+
+        <div class="details-section">
+           <span class="mr-1"><b>Genre:</b> {{details.Genre}}</span>  
+           <span class="mr-1"><b>Year:</b> {{details.Year}}</span> 
+           <span *ngIf="details.totalSeasons">{{details.totalSeasons}}</span>
+        </div>
+        <div class="details-section">
+            <b>Awards:</b> {{details.Awards}}
+        </div>
+        <div class="details-section">
+            <b>Director:</b>{{details.Director}}
+        </div>
+    </div>
+
+
+</div>

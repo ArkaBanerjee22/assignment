@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap';
+
+// custom-classes
+
+.title{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+img{
+    max-height: 400px;
+}
+
+.det-style{
+    position: absolute;
+    right: 0px;
+    top: 0;
+    background-color: antiquewhite;
+}
+.details-section{
+  font-size: 12px;
+  font-weight: 400;
+}
+input{
+    border: 1px solid;
+    border-radius: 3px;
+    width: 300px;
+    outline: none;
+    padding: 2px 5px;
+}
+.searchBar{
+    height: 50px ;
+
+}
+.main-panel{
+    height: calc(100vh - 60px);
+    overflow-y: scroll;
+}
+
+
+// helper classes 
+
+.cursor-pointer{
+  cursor: pointer;
+}
